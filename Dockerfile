@@ -15,6 +15,6 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
-COPY . /usr/shere/maven/
+ADD . /usr/shere/maven/
 
 ENTRYPOINT ["jre1.8.0_191\bin\java -cp "..\gxclassR.jar;.;..\jt400.jar;..\xercesImpl.jar;..\joda-time-2.8.2.jar;..\mysql-connector-java-5.1.11-bin.jar;..\commons-io-2.2.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100"]
