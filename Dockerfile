@@ -1,4 +1,4 @@
-FROM Java:8
+FROM java:8
 EXPOSE 8080
 ADD joda-time-2.8.2.jar   /home/joda-time-2.8.2.jar
 ENTRYPOINT ["Java","-jar","joda-time-2.8.2.jar"]
