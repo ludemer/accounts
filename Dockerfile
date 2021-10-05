@@ -1,7 +1,11 @@
-FROM maven:3.3-jdk-8-onbuild
-ADD joda-time-2.8.2.jar   /home/joda-time-2.8.2.jar 
-CMD ["Java","-jar","/home/joda-time-2.8.2.jar"]
-ENTRYPOINT ["java -version"]
+FROM Java:8
+EXPOSE 8080
+ADD joda-time-2.8.2.jar   /home/joda-time-2.8.2.jar
+ENTRYPOINT ["Java","-jar","joda-time-2.8.2.jar"]
+
+
+#CMD ["Java","-jar","/home/joda-time-2.8.2.jar"]
+#ENTRYPOINT ["java -version"]
 ##ENTRYPOINT ["java","-jar","/home/joda-time-2.8.2.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100"]
 #FROM openjdk:8-jdk
 
