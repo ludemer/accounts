@@ -1,4 +1,5 @@
 FROM java:8
+WORKDIR   /home
 EXPOSE 8080
 COPY joda-time-2.8.2.jar   /home/joda-time-2.8.2.jar
 ENTRYPOINT ["Java","-jar","joda-time-2.8.2.jar"]
