@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/java/jre:8-zulu-alpine  AS Build_accounts
-#WORKDIR   /home
+WORKDIR   /
 EXPOSE 8080
 COPY  .   /
 RUN ls /
