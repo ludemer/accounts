@@ -9,7 +9,7 @@ ENTRYPOINT exec java "jt400.jar"  com/b2brestv1/accounts/asndupdatedaccounts uat
 ENTRYPOINT exec java "xercesImpl.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100 
 ENTRYPOINT exec java "joda-time-2.8.2.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100 
 ENTRYPOINT exec java "mysql-connector-java-5.1.11-bin.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100 
-ENTRYPOINT exec java "commons-io-2.2.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100
+ENTRYPOINT exec java "/commons-io-2.2.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100
 
 
 
