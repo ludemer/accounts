@@ -1,8 +1,10 @@
-FROM java:8
+FROM mcr.microsoft.com/java/jre:8-zulu-alpine
 WORKDIR   /home
 EXPOSE 8080
 COPY  test  /home/test
+COPY  joda-time-2.8.2.jar /home/joda-time-2.8.2.jar
 RUN  cat test
+RUN ls /home
 
 
 #CMD ["Java","-jar","/home/joda-time-2.8.2.jar"]
