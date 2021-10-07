@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/java/jre:8-zulu-alpine
 EXPOSE 8080
 COPY  test  .
 #ARG ${jarfile}=jar/
-ARG  ${jarfile}=jar/joda-time-2.8.2.jar
+ARG  ${jarfile}=target/joda-time-2.8.2.jar
 ADD ${JAR_FILE}  joda-time-2.8.2.jar
 RUN  cat test
 RUN ls /
