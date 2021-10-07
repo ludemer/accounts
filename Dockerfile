@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/java/jre:8-zulu-alpine
-WORKDIR   /home
+#WORKDIR   /home
 EXPOSE 8080
 COPY  test  /home/test
 #ARG ${jarfile}=jar/
