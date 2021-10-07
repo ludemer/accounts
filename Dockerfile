@@ -1,9 +1,18 @@
-FROM mcr.microsoft.com/java/jre:8-zulu-alpine
+FROM mcr.microsoft.com/java/jre:8-zulu-alpine  AS Build_accounts
 #WORKDIR   /home
 EXPOSE 8080
 COPY  .   /
 RUN ls /
-ENTRYPOINT exec java "gxclassR.jar;jt400.jar;xercesImpl.jar;joda-time-2.8.2.jar;mysql-connector-java-5.1.11-bin.jar;commons-io-2.2.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100
+#ENTRYPOINT exec java "gxclassR.jar;jt400.jar;xercesImpl.jar;joda-time-2.8.2.jar;mysql-connector-java-5.1.11-bin.jar;commons-io-2.2.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100
+ENTRYPOINT exec java "gxclassR.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100
+ENTRYPOINT exec java "jt400.jar"  com/b2brestv1/accounts/asndupdatedaccounts uat AR 100 
+ENTRYPOINT exec java "xercesImpl.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100 
+ENTRYPOINT exec java "joda-time-2.8.2.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100 
+ENTRYPOINT exec java "mysql-connector-java-5.1.11-bin.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100 
+ENTRYPOINT exec java "commons-io-2.2.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100
+
+
+
 
 #CMD ["Java","-jar","/home/joda-time-2.8.2.jar"]
 #ENTRYPOINT ["java -version"]
