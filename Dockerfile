@@ -4,7 +4,7 @@ EXPOSE 8080
 COPY  test  .
 #ARG ${jarfile}=jar/
 ARG  ${jarfile}=jar/joda-time-2.8.2.jar  
-ADD ${JAR_FILE}   ADD ${JAR_FILE}
+ADD ${JAR_FILE}  ${JAR_FILE}
 RUN  cat test
 RUN ls /
 
