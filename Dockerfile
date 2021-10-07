@@ -3,8 +3,8 @@ WORKDIR   /home
 EXPOSE 8080
 COPY  test  .
 #ARG ${jarfile}=jar/
-ARG  ${jarfile}=jar/joda-time-2.8.2.jar  
-ADD ${JAR_FILE}  ${JAR_FILE}
+ARG  ${jarfile}="jar/joda-time-2.8.2.jar"
+ADD ${JAR_FILE}  joda-time-2.8.2.jar
 RUN  cat test
 RUN ls /
 
