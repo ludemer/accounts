@@ -1,11 +1,9 @@
 FROM mcr.microsoft.com/java/jre:8-zulu-alpine
 #WORKDIR   /home
 EXPOSE 8080
-COPY  test  .
 COPY  .   /
-RUN  cat test
 RUN ls /
-
+ENTRYPOINT exec java "gxclassR.jar;jt400.jar;xercesImpl.jar;joda-time-2.8.2.jar;mysql-connector-java-5.1.11-bin.jar;commons-io-2.2.jar" com/b2brestv1/accounts/asndupdatedaccounts uat AR 100
 
 #CMD ["Java","-jar","/home/joda-time-2.8.2.jar"]
 #ENTRYPOINT ["java -version"]
